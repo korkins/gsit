@@ -38,8 +38,6 @@ Maximum (max) and average (avr) errors vs. benchmark is in %.
 
 ## Tree & LOC:
 
-## TREE & LOC:
-
 ```
 gsit(40)  # input and test commands are not counted
    |
