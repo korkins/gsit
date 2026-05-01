@@ -76,10 +76,10 @@ LOC = 40 + 11 + 14 + 71 + 25 + 42 + 38 + 13 + 14 = 268
 ## Erratum, Modifications, and Notes:
 
 1. In multiple scattering simulations (function 'gauss_seidel_iterations' ), 'gsit' originally used all expansion moments of the phase function, xk. This is numerically harmless, but impractical in terms of efficiency. Now, 'gsit.py' contains the following change:
-line 72: nk = min(ng1*2, len(xk))
-line 78: ... = gauss_seidel_iterations_m(..., 0.5*ssa*xk[0:nk])
+line 72: nk = min(ng1 * 2, len(xk))
+line 78: ... = gauss_seidel_iterations_m(..., 0.5 * ssa * xk[0 : nk])
 
-Thus, for Rayleigh with len(xk) = 3 and ng2 = ng1*2 = 8*2 = 16 ordinates, nk = 3: all moments will be used. For Aerosol, with len(xk) = 36 and the same ng2 = 16, only 16 moments will be used in second and higher scattering orders. The (exact) single scattering still uses all 36 expansion moments of the phase function.
+Thus, for Rayleigh with len(xk) = 3 and ng2 = ng1 * 2 = 8 * 2 = 16 ordinates, nk = 3: all moments will be used. For Aerosol, with len(xk) = 36 and the same ng2 = 16, only 16 moments will be used in second and higher scattering orders. The (exact) single scattering still uses all 36 expansion moments of the phase function.
 
 Files uploaded to CPC repository remained unchanged.
 
