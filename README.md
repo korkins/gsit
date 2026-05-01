@@ -39,35 +39,35 @@ Maximum (max) and average (avr) errors vs. benchmark is in %.
 ## Tree & LOC:
 
 ```
-gsit(40)  # input and test commands are not counted
+gsit (40)  # input and test commands are not counted
    |
-   +-single_scattering_up(11)
-   |   |
-   |   +-legendre_polynomial(13)
+   +-single_scattering_up (11)
+   |                    |
+   |                    +-legendre_polynomial(13)
    |
-   +-single_scattering_down(14)
-   |   |
-   |   +-legendre_polynomial(13)
+   +-single_scattering_down (14)
+   |                      |
+   |                      +-legendre_polynomial (13)
    |
-   +-gauss_seidel_iterations_m(71)
-   |   |
-   |   +-gauss_zeroes_weights(25)
-   |   |
-   |   +-legendre_polynomial(13)
-   |   |
-   |   +-schmidt_polynomial(14)
+   +-gauss_seidel_iterations_m (71)
+   |                         |
+   |                         +-gauss_zeroes_weights (25)
+   |                         |
+   |                         +-legendre_polynomial (13)
+   |                         |
+   |                         +-schmidt_polynomial (14)
    |
-   +-source_function_integrate_up(42)
-   |   |
-   |   +-legendre_polynomial(13)
-   |   |
-   |   +-schmidt_polynomial(14)
+   +-source_function_integrate_up (42)
+   |                            |
+   |                            +-legendre_polynomial (13)
+   |                            |
+   |                            +-schmidt_polynomial (14)
    |
    +-source_function_integrate_down(38)
-       |
-       +-legendre_polynomial(13)
-       |
-       +-schmidt_polynomial(14)
+                                  |
+                                  +-legendre_polynomial (13)
+                                  |
+                                  +-schmidt_polynomial(14)
 ```
 
 LOC = 40 + 11 + 14 + 71 + 25 + 42 + 38 + 13 + 14 = 268
