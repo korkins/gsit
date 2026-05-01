@@ -40,7 +40,7 @@ Maximum (max) and average (avr) errors vs. benchmark is in %.
 
 ## TREE & LOC:
 
-```text
+```
 gsit(40)  # input and test commands are not counted
    |
    +-single_scattering_up(11)
