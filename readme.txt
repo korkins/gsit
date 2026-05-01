@@ -1,4 +1,4 @@
-### SUMMARY:
+# *** SUMMARY*** :
 
 Code 'gsit' simulates the transfer of unpolarized monochromatic solar radiation in a plane-parallel atmosphere over a reflecting surface. Both the surface and the atmosphere are homogeneous (uniform) at all directions. The multiple scattering is numerically solved using the deterministic method of Gauss-Seidel iterations - hence, the name.
 
@@ -7,7 +7,7 @@ For details, see S. Korkin, A.M. Sayer, A. Ibrahim, A. Lyapustin, "A practical g
 For a version of 'gsit' accounting for multiple layers, including solution inside atmosphere, see: https://github.com/korkins/gsit_multilayer.
 
 
-INSTRUCTIONS:
+### INSTRUCTIONS:
 
 In gsit.py, line 15:
     phasefun = 'r' # Rayleigh case
