@@ -1,6 +1,6 @@
 # GSIT Radiative Transfer Code
 
-## SUMMARY:
+## Summary:
 
 Code 'gsit' simulates the transfer of unpolarized monochromatic solar radiation in a plane-parallel atmosphere over a reflecting surface. Both the surface and the atmosphere are homogeneous (uniform) at all directions. The multiple scattering is numerically solved using the deterministic method of Gauss-Seidel iterations - hence, the name.
 
@@ -9,7 +9,7 @@ For details, see S. Korkin, A.M. Sayer, A. Ibrahim, A. Lyapustin, "A practical g
 For a version of 'gsit' accounting for multiple layers, including solution inside atmosphere, see: https://github.com/korkins/gsit_multilayer.
 
 
-## INSTRUCTIONS:
+## Instructions:
 
 In gsit.py, line 15:
 
@@ -36,42 +36,46 @@ In gsit.py, line 15:
 Maximum (max) and average (avr) errors vs. benchmark is in %.
 
 
+## Tree & LOC:
+
 ## TREE & LOC:
 
-gsit(40) # input and test commands are not counted
+```text
+gsit(40)  # input and test commands are not counted
    |
    +-single_scattering_up(11)
-   |                    |
-   |                    +-legendre_polynomial(13)
+   |   |
+   |   +-legendre_polynomial(13)
    |
    +-single_scattering_down(14)
-   |                      |
-   |                      +-legendre_polynomial(13)
+   |   |
+   |   +-legendre_polynomial(13)
    |
    +-gauss_seidel_iterations_m(71)
-   |                         |
-   |                         +-gauss_zeroes_weights(25)
-   |                         |
-   |                         +-legendre_polynomial(13)
-   |                         |
-   |                         +-schmidt_polynomial(14)
+   |   |
+   |   +-gauss_zeroes_weights(25)
+   |   |
+   |   +-legendre_polynomial(13)
+   |   |
+   |   +-schmidt_polynomial(14)
    |
    +-source_function_integrate_up(42)
-   |                            |
-   |                            +-legendre_polynomial(13)
-   |                            |
-   |                            +-schmidt_polynomial(14)
+   |   |
+   |   +-legendre_polynomial(13)
+   |   |
+   |   +-schmidt_polynomial(14)
    |
    +-source_function_integrate_down(38)
-                                |
-                                +-legendre_polynomial(13)
-                                |
-                                +-schmidt_polynomial(14)
+       |
+       +-legendre_polynomial(13)
+       |
+       +-schmidt_polynomial(14)
+```
 
 LOC = 40 + 11 + 14 + 71 + 25 + 42 + 38 + 13 + 14 = 268
 
 
-## ERRATUM, MODIFICATIONS, and NOTES:
+## Erratum, Modifications, and Notes:
 
 1. In multiple scattering simulations (function 'gauss_seidel_iterations' ), 'gsit' originally used all expansion moments of the phase function, xk. This is numerically harmless, but impractical in terms of efficiency. Now, 'gsit.py' contains the following change:
 line 72: nk = min(ng1*2, len(xk))
