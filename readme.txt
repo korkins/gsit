@@ -1,4 +1,4 @@
-SUMMARY:
+### SUMMARY:
 
 Code 'gsit' simulates the transfer of unpolarized monochromatic solar radiation in a plane-parallel atmosphere over a reflecting surface. Both the surface and the atmosphere are homogeneous (uniform) at all directions. The multiple scattering is numerically solved using the deterministic method of Gauss-Seidel iterations - hence, the name.
 
