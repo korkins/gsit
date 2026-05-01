@@ -98,6 +98,7 @@ Files uploaded to CPC repository remained unchanged.
                   line 45: tau[ib-1]
        Fig.14,    line 45: tau[nb-2]
                   line 50: tau[ib]
+       Sec.4.2, code snippet, middle line: mask[jl]
 ```
 
 4. Eq.(17), right-most term (direct solar beam bouncing) is missing the factor of pi/mu0. See Eqs.(3), where the factor is present. The code also accounts fro this factor properly (see the Aerosol-over-Lambertian surface test).
