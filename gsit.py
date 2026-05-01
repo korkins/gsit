@@ -69,12 +69,13 @@ if __name__ == "__main__":
 #
 #   Compute Fourier moments for MS
     time_gsitm = 0.0
+    nk = min(ng1*2, len(xk))
     deltm0 = 1.0
     for m in range(nm):
 #
 #       Solve RTE at Gauss nodes & all boundaries
         t1 = time.time()
-        mug, wg, Igup, Igdn = gauss_seidel_iterations_m(m, mu0, srfa, nit, ng1, nlr, dtau, 0.5*ssa*xk)
+        mug, wg, Igup, Igdn = gauss_seidel_iterations_m(m, mu0, srfa, nit, ng1, nlr, dtau, 0.5*ssa*xk[0:nk])
         t2 = time.time()
         time_gsitm += t2 - t1
 #
