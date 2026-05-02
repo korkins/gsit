@@ -103,12 +103,14 @@ Thus, for Rayleigh with len(xk) = 3 and ng2 = ng1 * 2 = 8 * 2 = 16 ordinates, nk
 
 6. Typo: p. 12, after Eq. (15), the Wolfram website is assigned the footnote #16, but the correct one is #17 (p. 11) or #19 (p. 12) - the two web links are identical.
 
-7. Sec. 4.2 and Figs. 16(a,b): splitting atmosphere into equally thick element layers 'dtau' for integration over optical thickness 'tau' works well for simulating signal reflected from TOA or transmitted through BOA. See, e.g., Table 1 (column NL - number of optical layers - cases with NL > 1) in http://dx.doi.org/10.1016/j.jqsrt.2017.04.035. However, for simulation of light scattering inside atmosphere, the alternation of the extinction profile - Fig. 16(b) - may introduce errors. For example, in the upper atmosphere, many optically thin layers are combined into one dtau, making the result within that part of the atmosphere incorrect (as expected). For a slightly different strategy, see 'splittau.py' in 'gsit_multilayer' code (reference above).
+7. Sec. 4.2 and Figs. 16(a,b): splitting atmosphere into equally thick element layers 'dtau' for integration over optical thickness 'tau' works well for simulating signal reflected from TOA or transmitted through BOA. See, e.g., Table 1 (column NL - number of optical layers - cases with NL > 1) in http://dx.doi.org/10.1016/j.jqsrt.2017.04.035. However, for simulation of light scattering inside atmosphere, the alternation of the extinction profile - Fig. 16(b) - may introduce errors. For example, in the upper atmosphere, many optically thin layers are combined into one 'dtau', making the result within that part of the atmosphere incorrect (as expected). For a slightly different strategy, see 'splittau.py' in 'gsit_multilayer' code (reference above).
 
 8. Figs. 13(e) and 14: single scattering contribution is added (lines 45 and 50, respectively) to properly reflect the physical process. At returns (lines 47 and 52, respectively), it is subtracted for numerical reason (single scattering correction - see Fig. 15(d)). Clearly, one can drop both steps: neither add, nor subtract single scattering at the step of integration over tau at user-defined directions (up and down). This results in simulation of light scattered multiple times (2+). Exact single scattering is added separately.
 
 9. Fig. 12(c): consider precomputing the arrays mug and wg in lines 14-16 and pass them as parameters.
 
 10. Fig. 12(i) lines 64-67, Fig. 12(j) lines 78-83, Fig. 13(c) line 32, Fig. 13(e) line 41, Fig. 14 lines 44-64: in all these cases, we explicitly code the first step in the loop for clarity. This is, however, optional: including the first step in the main loop would make the code shorter (see 'gsit_multilayer')
+
+11. In the published paper (see 'Korkin_Sayer_Ibrahim_Lyapustin_cpc(2022)_271_108198.pdf' in the repository), the reference format does not include paper titles. We provide the titles in 'references_with_paper_titles.pdf'.
 
 -EOF-
