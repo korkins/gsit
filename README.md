@@ -32,7 +32,7 @@ In gsit.py, line 15:
 The maximum (max) and average (avr) errors relative to the benchmark are given in %.
 
 
-## Tree & LOC:
+## Code structure (Tree & LOC):
 
 ```
 gsit (40)  # input and test commands are not counted
