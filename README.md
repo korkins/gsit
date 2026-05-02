@@ -81,7 +81,7 @@ line 78: ... = gauss_seidel_iterations_m(..., 0.5 * ssa * xk[0 : nk])
 
 Thus, for Rayleigh with len(xk) = 3 and ng2 = ng1 * 2 = 8 * 2 = 16 ordinates, nk = 3: all moments will be used. For Aerosol, with len(xk) = 36 and the same ng2 = 16, only the first 16 moments will be used in the second and higher scattering orders. The (exact) single scattering still uses all 36 expansion moments of the phase function.
 
-3. Fig. 4 is missing an element, properly shown in Fig. B of this paper: https://doi.org/10.1016/j.jqsrt.2022.108194. Fig. B with caption is uploaded to this repository for convenience: Korkin_etal_jqsrt(2022)_FigB_Caption.jpg. In its right-hand side, note element (c3) missing from Fig. 4 of the RT guide - but not from the 'gsit' code (otherwise the tests would fail).
+3. Fig. 4 is missing an element, properly shown in Fig. B of this paper: https://doi.org/10.1016/j.jqsrt.2022.108194. Fig. B with caption is uploaded to this repository for convenience - see Korkin_etal_jqsrt(2022)_FigB_and_Caption.jpg. In its right-hand side, note element (c3) missing from Fig. 4 of the RT guide - but not from the 'gsit' code (otherwise the tests would fail).
 
 4. In the code snippets presented in the RT guide as figures, we use bold font for arrays. Since we did this manually, a few elements have mistakenly not been bold. Here is the list of those spotted so far:
 ```
