@@ -2,11 +2,11 @@
 
 ## Summary:
 
-Code 'gsit' simulates the transfer of unpolarized monochromatic solar radiation in a plane-parallel atmosphere over a reflecting surface. Both the surface and the atmosphere are homogeneous (uniform) at all directions. The multiple scattering is numerically solved using the deterministic method of Gauss-Seidel iterations - hence, the name.
+Code 'gsit' simulates the transfer of unpolarized, monochromatic solar radiation in a plane-parallel atmosphere over a reflecting Lambertian surface. Both the surface and the atmosphere are spatially homogeneous (uniform). Multiple scattering is solved numerically using the deterministic Gauss-Seidel iteration method - hence, the name.
 
-For details, see S. Korkin, A.M. Sayer, A. Ibrahim, A. Lyapustin, "A practical guide to writing a radiative transfer code", Computer Physics Communications, 271: 108198, 2022. doi: https://doi.org/10.1016/j.cpc.2021.108198
+For details, see the RT guide: S. Korkin, A.M. Sayer, A. Ibrahim, A. Lyapustin, "A practical guide to writing a radiative transfer code", Computer Physics Communications, 271: 108198, 2022. doi: https://doi.org/10.1016/j.cpc.2021.108198
 
-For a version of 'gsit' accounting for multiple layers, including solution inside atmosphere, see: https://github.com/korkins/gsit_multilayer.
+For a version of 'gsit' that accounts for multiple layers, including the solution within the atmosphere, see: https://github.com/korkins/gsit_multilayer.
 
 
 ## Instructions:
@@ -14,26 +14,22 @@ For a version of 'gsit' accounting for multiple layers, including solution insid
 In gsit.py, line 15:
 
     phasefun = 'r' # Rayleigh case
-        TOA:
-         max & avr errs: 0.02  0.02
-
-        BOA:
-         max & avr errs: 0.02  0.02
-
+    
+        TOA: max & avr errs: 0.02  0.02
+        BOA: max & avr errs: 0.02  0.02
+        
         multiple scattering runtime = 0.04 sec.
         gsit total runtime = 0.13 sec.
 
     phasefun = 'a' # Aerosol over Lambertian surface
-        TOA:
-         max & avr errs: 0.10  0.07
-
-        BOA:
-         max & avr errs: 0.12  0.06
+    
+        TOA: max & avr errs: 0.10  0.07
+        BOA: max & avr errs: 0.12  0.06
 
         multiple scattering runtime = 0.06 sec.
         gsit total runtime = 0.18 sec.
 
-Maximum (max) and average (avr) errors vs. benchmark is in %.
+The maximum (max) and average (avr) errors relative to the benchmark are given in %.
 
 
 ## Tree & LOC:
@@ -73,7 +69,7 @@ gsit (40)  # input and test commands are not counted
 LOC = 40 + 11 + 14 + 71 + 25 + 42 + 38 + 13 + 14 = 268
 
 
-## Erratum, Modifications, and Notes:
+## Errata, Modifications, and Notes:
 
 1. In multiple scattering simulations (function 'gauss_seidel_iterations' ), 'gsit' originally used all expansion moments of the phase function, xk. This is numerically harmless, but impractical in terms of efficiency. Now, 'gsit.py' contains the following change:
 line 72: nk = min(ng1 * 2, len(xk))
