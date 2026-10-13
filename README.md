@@ -115,4 +115,6 @@ Thus, for Rayleigh with len(xk) = 3 and ng2 = ng1 * 2 = 8 * 2 = 16 ordinates, nk
 
 12. The right-most term in Eq.(4) is incorrect. See 'erratum_Eq4_Fig4' (doc or pdf), located in the root directory, for details.
 
+13. Literature references in the published paper does not show paper titles (this format was requested at the time of publication). See 'gsit_123_references_titles_weblinks' (doc or pdf), located in the root directory, for the titles and weblinks. 
+
 -EOF-
