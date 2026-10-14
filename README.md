@@ -117,6 +117,6 @@ Thus, for Rayleigh with len(xk) = 3 and ng2 = ng1 * 2 = 8 * 2 = 16 ordinates, nk
 
 13. Literature references in the published paper does not show paper titles (this format was requested at the time of publication). See 'gsit_123_references_titles_weblinks' (doc or pdf), located in the root directory, for the titles and weblinks.
 
-14. Eq.(23), right-most term, both Pkm polynomials, Eq.(12), must in fact be Qkm, Eq.(14). The square root in Eq.(14) removes the (k - m)!/(k + m)! scaling factor from the Legendre addition theorem (see, Eq.(4) here https://mathworld.wolfram.com/SphericalHarmonicAdditionTheorem.html)   
+14. Eq.(23), right-most term, both Pkm polynomials must in fact be Qkm - see Eq.(14). The square root in Eq.(14) removes the (k - m)!/(k + m)! scaling factor from the Legendre addition theorem (see, Eq.(4) here https://mathworld.wolfram.com/SphericalHarmonicAdditionTheorem.html).
 
 -EOF-
